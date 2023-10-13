@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>{{ env('APP_NAME') }}</title>
     <!-- AUTHOR -->
     <meta name="author" content="Samuele Benato" />
     <!-- DESCRIPTION -->
@@ -35,9 +35,13 @@
 </head>
 
 <body>
-    <header>@yield('header-content')</header>
+
+    @include('partials.navbar');
+
     <main>@yield('main-content')</main>
-    <footer>@yield('footer-content')</footer>
+    <footer>
+
+    </footer>
 </body>
 
 </html>
